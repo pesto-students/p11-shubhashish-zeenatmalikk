@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import styles from "./stylesheet.module.css"
+import BookDataLoader from '../DataLoader/BookDataLoader'
 const BookDetails = (props) => {
-    const { val, i ,books,setBooks} = props
+    const { val, i, books, setBooks } = props
     const { img = '', title = '', year = '', author = '' } = val
     const [showDetails, setShowDetails] = useState(false);
     const toggleDetails = () => {
@@ -25,18 +26,16 @@ const BookDetails = (props) => {
                         </button>
                         <button onClick={() => handleDelete(val.id)}>Delete</button>
                         {showDetails && (
-                    <div className="additional-details">
-                        {/* Render additional details here */}
-                        <p>Description: Lorem ipsum dolor sit amet...</p>
-                        <p>Genre: Fiction</p>
+                            <div className="additional-details">
+                                {/* Render additional details here */}
+                                <p>Description: Lorem ipsum dolor sit amet...</p>
+                                <p>Genre: Fiction</p>
+                            </div>
+                        )}
                     </div>
-                )}
-                    </div>
-
                 </div>
-                
             </div>
-
+                    <BookDataLoader setBooks={setBooks} />
         </div>
     )
 }
