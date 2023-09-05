@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import styles from "./stylesheet.module.css"
 import BookDataLoader from '../DataLoader/BookDataLoader'
 const BookDetails = ({ val, i, books, setBooks }) => {
-    const { val, i, books, setBooks } = props
     const { img = '', title = '', year = '', author = '' } = val
     const [showDetails, setShowDetails] = useState(false);
     const toggleDetails = () => {
