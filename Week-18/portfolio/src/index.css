@@ -1,0 +1,24 @@
+body{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #101010;
+  color: #fff;
+}
+@font-face {
+  font-family: "Satoshi-regular"; /* Provide a name for your font */
+  src: url("../public/fonts/Satoshi-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Saoshi-Medium"; /* Provide a name for your font */
+  src: url("../public/fonts/Satoshi-Medium.woff") format("woff");
+}
+@font-face {
+  font-family: "Satoshi-Bold"; /* Provide a name for your font */
+  src: url("../public/fonts/Satoshi-Bold.woff") format("woff");
+}
+@font-face {
+  font-family: "Magilio-regular"; /* Provide a name for your font */
+  src: url("../public/fonts/MagilioRegular-8Mxvg.otf") format("otf");
+}
