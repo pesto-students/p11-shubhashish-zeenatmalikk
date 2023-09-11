@@ -43,9 +43,9 @@ const BookList = () => {
       {filteredBooks?.length === 0 ? (
         <p>The book list is currently empty.</p>
       ) : (
-        sortedBooks?.map((val) => (
+        sortedBooks?.map((book) => (
           <div key={val.id}>
-            <BookDetails books={books} setBooks={setBooks} val={val} />
+            <BookDetails books={books} setBooks={setBooks} singleBook={book} />
           </div>
         ))
       )}

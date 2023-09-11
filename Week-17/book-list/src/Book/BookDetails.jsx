@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import styles from "./stylesheet.module.css"
 import BookDataLoader from '../DataLoader/BookDataLoader'
-const BookDetails = ({ val, i, books, setBooks }) => {
-    const { img = '', title = '', year = '', author = '' } = val
+const BookDetails = ({ singleBook, books, setBooks }) => {
+    const { img = '', title = '', year = '', author = '' } = singleBook
     const [showDetails, setShowDetails] = useState(false);
     const toggleDetails = () => {
         setShowDetails(!showDetails);
@@ -34,7 +34,7 @@ const BookDetails = ({ val, i, books, setBooks }) => {
                     </div>
                 </div>
             </div>
-                    <BookDataLoader setBooks={setBooks} />
+                    <BookDataLoader  />
         </div>
     )
 }
