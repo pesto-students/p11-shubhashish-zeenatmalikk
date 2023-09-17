@@ -26,7 +26,7 @@ const WorkoutPlanner = () => {
   const [selectedExercises, setSelectedExercises] = useState([]);
   const [buttonClicked, setButtonClicked] = useState(false);
 
-  const hf = new HfInference(`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`);
+  const hf = new HfInference(import.meta.env.VITE_ACCESS_KEY);
   const handleMuscleGroupChange = (event) => {
     setMuscleGroups(event.target.value);
   };
