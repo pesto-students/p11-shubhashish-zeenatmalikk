@@ -1,0 +1,260 @@
+[{
+  "_id": {
+    "$oid": "65338168150bdba4e5eac1d7"
+  },
+  "title": "Inception",
+  "release_year": 2010,
+  "genre": "Sci-Fi",
+  "director": {
+    "name": "Christopher Nolan",
+    "nationality": "British"
+  },
+  "actors": [
+    {
+      "name": "Leonardo DiCaprio",
+      "nationality": "American"
+    },
+    {
+      "name": "Joseph Gordon-Levitt",
+      "nationality": "American"
+    },
+    {
+      "name": "Elliot Page",
+      "nationality": "Canadian"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65338a9f150bdba4e5eac1d9"
+  },
+  "title": "The Dark Knight",
+  "genre": "Action",
+  "release_year": 2008,
+  "director": {
+    "name": "Christopher Nolan",
+    "nationality": "British"
+  },
+  "actors": [
+    {
+      "name": "Christian Bale",
+      "nationality": "British"
+    },
+    {
+      "name": "Heath Ledger",
+      "nationality": "Australian"
+    },
+    {
+      "name": "Aaron Eckhart",
+      "nationality": "American"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65338a9f150bdba4e5eac1da"
+  },
+  "title": "Pulp Fiction",
+  "genre": "Crime",
+  "release_year": 1994,
+  "director": {
+    "name": "Quentin Tarantino",
+    "nationality": "American"
+  },
+  "actors": [
+    {
+      "name": "John Travolta",
+      "nationality": "American"
+    },
+    {
+      "name": "Samuel L. Jackson",
+      "nationality": "American"
+    },
+    {
+      "name": "Uma Thurman",
+      "nationality": "American"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65338a9f150bdba4e5eac1db"
+  },
+  "title": "The Shawshank Redemption",
+  "genre": "Drama",
+  "release_year": 1994,
+  "director": {
+    "name": "Frank Darabont",
+    "nationality": "American"
+  },
+  "actors": [
+    {
+      "name": "Tim Robbins",
+      "nationality": "American"
+    },
+    {
+      "name": "Morgan Freeman",
+      "nationality": "American"
+    },
+    {
+      "name": "Bob Gunton",
+      "nationality": "American"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65338a9f150bdba4e5eac1dc"
+  },
+  "title": "Forrest Gump",
+  "genre": "Drama",
+  "release_year": 1994,
+  "director": {
+    "name": "Robert Zemeckis",
+    "nationality": "American"
+  },
+  "actors": [
+    {
+      "name": "Tom Hanks",
+      "nationality": "American"
+    },
+    {
+      "name": "Robin Wright",
+      "nationality": "American"
+    },
+    {
+      "name": "Gary Sinise",
+      "nationality": "American"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65338a9f150bdba4e5eac1dd"
+  },
+  "title": "The Matrix",
+  "genre": "Sci-Fi",
+  "release_year": 1999,
+  "director": {
+    "name": "Lana Wachowski, Lilly Wachowski",
+    "nationality": "American"
+  },
+  "actors": [
+    {
+      "name": "Keanu Reeves",
+      "nationality": "Canadian"
+    },
+    {
+      "name": "Laurence Fishburne",
+      "nationality": "American"
+    },
+    {
+      "name": "Carrie-Anne Moss",
+      "nationality": "Canadian"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65338a9f150bdba4e5eac1de"
+  },
+  "title": "Fight Club",
+  "genre": "Drama",
+  "release_year": 1999,
+  "director": {
+    "name": "David Fincher",
+    "nationality": "American"
+  },
+  "actors": [
+    {
+      "name": "Brad Pitt",
+      "nationality": "American"
+    },
+    {
+      "name": "Edward Norton",
+      "nationality": "American"
+    },
+    {
+      "name": "Helena Bonham Carter",
+      "nationality": "British"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65338a9f150bdba4e5eac1df"
+  },
+  "title": "Titanic",
+  "genre": "Romance",
+  "release_year": 1997,
+  "director": {
+    "name": "James Cameron",
+    "nationality": "Canadian"
+  },
+  "actors": [
+    {
+      "name": "Leonardo DiCaprio",
+      "nationality": "American"
+    },
+    {
+      "name": "Kate Winslet",
+      "nationality": "British"
+    },
+    {
+      "name": "Billy Zane",
+      "nationality": "American"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65338a9f150bdba4e5eac1e0"
+  },
+  "title": "Jurassic Park",
+  "genre": "Sci-Fi",
+  "release_year": 1993,
+  "director": {
+    "name": "Steven Spielberg",
+    "nationality": "American"
+  },
+  "actors": [
+    {
+      "name": "Sam Neill",
+      "nationality": "New Zealander"
+    },
+    {
+      "name": "Laura Dern",
+      "nationality": "American"
+    },
+    {
+      "name": "Jeff Goldblum",
+      "nationality": "American"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65338a9f150bdba4e5eac1e1"
+  },
+  "title": "Gladiator",
+  "genre": "Action",
+  "release_year": 2000,
+  "director": {
+    "name": "Ridley Scott",
+    "nationality": "British"
+  },
+  "actors": [
+    {
+      "name": "Russell Crowe",
+      "nationality": "Australian"
+    },
+    {
+      "name": "Joaquin Phoenix",
+      "nationality": "American"
+    },
+    {
+      "name": "Connie Nielsen",
+      "nationality": "Danish"
+    }
+  ]
+}]
