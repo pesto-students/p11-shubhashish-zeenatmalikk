@@ -1,0 +1,121 @@
+[{
+  "_id": {
+    "$oid": "65338ad6150bdba4e5eac1e4"
+  },
+  "name": "Christopher Nolan",
+  "nationality": "British",
+  "movies_directed": [
+    {
+      "title": "Inception",
+      "release_year": 2010
+    },
+    {
+      "title": "The Dark Knight",
+      "release_year": 2008
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65338ad6150bdba4e5eac1e5"
+  },
+  "name": "Quentin Tarantino",
+  "nationality": "American",
+  "movies_directed": [
+    {
+      "title": "Pulp Fiction",
+      "release_year": 1994
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65338ad6150bdba4e5eac1e6"
+  },
+  "name": "Frank Darabont",
+  "nationality": "American",
+  "movies_directed": [
+    {
+      "title": "The Shawshank Redemption",
+      "release_year": 1994
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65338ad6150bdba4e5eac1e7"
+  },
+  "name": "Robert Zemeckis",
+  "nationality": "American",
+  "movies_directed": [
+    {
+      "title": "Forrest Gump",
+      "release_year": 1994
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65338ad6150bdba4e5eac1e8"
+  },
+  "name": "Lana Wachowski, Lilly Wachowski",
+  "nationality": "American",
+  "movies_directed": [
+    {
+      "title": "The Matrix",
+      "release_year": 1999
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65338ad6150bdba4e5eac1e9"
+  },
+  "name": "David Fincher",
+  "nationality": "American",
+  "movies_directed": [
+    {
+      "title": "Fight Club",
+      "release_year": 1999
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65338ad6150bdba4e5eac1ea"
+  },
+  "name": "James Cameron",
+  "nationality": "Canadian",
+  "movies_directed": [
+    {
+      "title": "Titanic",
+      "release_year": 1997
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65338ad6150bdba4e5eac1eb"
+  },
+  "name": "Steven Spielberg",
+  "nationality": "American",
+  "movies_directed": [
+    {
+      "title": "Jurassic Park",
+      "release_year": 1993
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65338ad6150bdba4e5eac1ec"
+  },
+  "name": "Ridley Scott",
+  "nationality": "British",
+  "movies_directed": [
+    {
+      "title": "Gladiator",
+      "release_year": 2000
+    }
+  ]
+}]
