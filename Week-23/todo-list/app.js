@@ -1,28 +1,30 @@
-const { MongoClient, Collection } = require("mongodb");
+require("dotenv").config();
 const express = require("express");
-const Todo = require("./Model/TodoModel"); 
+const PORT = process.env.PORT || 3000; // Use PORT environment variable or default to 3000
+
 const app = express();
 const cors = require("cors");
 const { default: mongoose } = require("mongoose");
-const router=require('./Router/TodoRouter')
+const router = require("./Router/TodoRouter");
 app.use(cors());
 app.use(express.json());
-app.use("/api",router)
+app.use("/api", router);
 
-async function getAllDocuments() {
+
+async function connectToDatabase() {
   try {
-    await mongoose.connect(`mongodb+srv://zeenatmalikk:Malik987@cluster0.7s9rdpv.mongodb.net/?retryWrites=true&w=majority`);
-    console.log("Connected!");
-
-    // const db = client.db(DB_NAME);
-    // const result = await db.collection(COL_NAME).find().toArray();
-    // console.log(result);
+    await mongoose.connect(process.env.DATABASE_URL, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    });
+    console.log("Connected to the database!");
   } catch (error) {
-    console.log("error", error);
-  } 
+    console.error("Error connecting to the database:", error);
+    process.exit(1); 
+  }
 }
-getAllDocuments();
 
-app.listen(3000, () => {
-  console.log("server running on port 3000");
+connectToDatabase();
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });

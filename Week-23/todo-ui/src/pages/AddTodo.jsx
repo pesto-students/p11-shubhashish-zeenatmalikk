@@ -1,33 +1,31 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./AddTodo.module.less";
 import axios from "axios";
 
-const AddTodo = () => {
+const Todo = () => {
   const [todo, setTodo] = useState("");
   const [allTodos, setAllTodos] = useState([]);
   const [todoToUpdate, setTodoToUpdate] = useState(null);
+  const apiUrl = process.env.REACT_APP_API_URL;
 
   const getTodo = async () => {
     try {
-      const data = await axios.get(`http://localhost:3000/api`);
-      console.log("data", data.data);
+      const data = await axios.get(apiUrl);
       setAllTodos(data.data);
     } catch (error) {
       console.error("Error getting todos:", error);
     }
   };
 
-  const handleAddTodo = async () => {
+  const handleAddOrUpdate = async () => {
     try {
       if (todoToUpdate) {
-        // If todoToUpdate is set, update the existing todo
-        await axios.put(`http://localhost:3000/api/${todoToUpdate._id}`, {
+        await axios.put(`${apiUrl}/${todoToUpdate._id}`, {
           todo,
         });
-        setTodoToUpdate(null); // Reset the todoToUpdate state
+        setTodoToUpdate(null); 
       } else {
-        // Otherwise, add a new todo
-        await axios.post("http://localhost:3000/api", {
+        await axios.post(apiUrl, {
           todo,
         });
       }
@@ -44,16 +42,16 @@ const AddTodo = () => {
   }, []);
 
   const handleDelete = async (id) => {
-    console.log("id", id);
-    if (id) {
-      const updatedTodos = allTodos.find((todo) => todo._id !== id);
-      setAllTodos(updatedTodos);
-      await axios
-        .delete(`http://localhost:3000/api/${id}`)
-        .then((res) => {
-          console.log("res", res.data);
-        })
-        .catch((err) => console.log("error", error));
+    try {
+      if (id) {
+        await axios.delete(`${process.env.REACT_APP_API_URL}/${id}`);
+
+        const updatedTodos = allTodos.filter((todo) => todo._id !== id);
+        setAllTodos(updatedTodos);
+        console.log("Todo deleted successfully!");
+      }
+    } catch (error) {
+      console.error("Error deleting todo:", error);
     }
   };
 
@@ -79,13 +77,13 @@ const AddTodo = () => {
         onChange={(e) => setTodo(e.target.value)}
         value={todo}
       />
-      <button onClick={handleAddTodo}>
-        {(todoToUpdate && todo !== "") ? "Update todo" : "Add todo"}
+      <button onClick={handleAddOrUpdate}>
+        {todoToUpdate && todo !== "" ? "Update todo" : "Add todo"}
       </button>
       <button onClick={handleClear}>clear</button>
       {allTodos.map((item, i) => (
         <div className={styles.todoList}>
-          <div key={i}>{item.todo}</div>
+          <div key={item._id}>{item.todo}</div>
           <button onClick={() => handleDelete(item._id)}>Delete</button>
           <button onClick={() => handleUpdate(item._id)}>Update</button>
         </div>
@@ -94,4 +92,4 @@ const AddTodo = () => {
   );
 };
 
-export default AddTodo;
+export default Todo;

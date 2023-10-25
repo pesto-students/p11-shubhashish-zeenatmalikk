@@ -1,44 +1,53 @@
-const Todo = require("../Model/TodoModel");
-exports.postTodo = async (req, res) => {
+const Todo = require("../Model/todomodel");
+const HttpStatus = require("http-status-codes");
+
+const postTodo = async (req, res) => {
   try {
     const { todo } = req.body;
-    const newTodo = new Todo({ todo });
-    await newTodo.save();
-    res.status(201).json(newTodo);
+    const newTodo = await Todo.create({ todo });
+    res.status(HttpStatus.CREATED).json(newTodo);
   } catch (error) {
     console.error("Error inserting todo:", error);
-    res.status(500).json({ error: "Internal Server Error" });
-  }
-};
-//get aallTodos
-exports.getTodos = async (req, res) => {
-  try {
-    const result = await Todo.find();
-    if(result.length==0){
-        res.status(404).json({msg:'No Todos Found'})
-    }
-    res.status(200).json(result);
-  } catch (error) {
-    console.log("error", error);
+    res
+      .status(HttpStatus.INTERNAL_SERVER_ERROR)
+      .json({ error: "Internal Server Error" });
   }
 };
 
+//get allTodos
+const getTodos = async (req, res) => {
+  try {
+    const result = await Todo.find();
+    if (result.length === 0) {
+      return res.status(HttpStatus.FORBIDDEN).json({ error: "No Todos Found" });
+    }
+    res.status(HttpStatus.OK).json(result);
+  } catch (error) {
+    console.error("Error fetching todos:", error);
+    res.status(500).json({ error: "Internal Server Error" });
+  }
+};
 //get todo by id
-exports.getTodoByID = async (req, res) => {
-  const id = req.params.id;
+const getTodoByID = async (req, res) => {
+  const { id } = req.params;
   try {
     const result = await Todo.findById(id);
-    console.log("result id", result);
-    res.status(201).json(result);
+    if (!result) {
+      return res.status(HttpStatus.FORBIDDEN).json({ error: "Todo not found" });
+    }
+    res.status(HttpStatus.OK).json(result);
   } catch (error) {
-    console.error("error");
+    console.error("Error fetching todo by ID:", error);
+    res
+      .status(HttpStatus.INTERNAL_SERVER_ERROR)
+      .json({ error: "Internal Server Error" });
   }
 };
 
 //update todo
 
-exports.updateTodo = async (req, res) => {
-  const id = req.params.id;
+const updateTodo = async (req, res) => {
+  const { id } = req.params;
   const { todo } = req.body;
   try {
     const updatedTodo = await Todo.findByIdAndUpdate(
@@ -46,26 +55,27 @@ exports.updateTodo = async (req, res) => {
       { todo },
       { new: true }
     );
-    if (!updatedTodo) {
-      return res.status(404).json({ error: "Todo not found" });
-    }
-    res.status(200).json(updatedTodo);
+
+    res.status(HttpStatus.OK).json(updatedTodo);
   } catch (error) {
     console.log("error", error);
-    res.status(404).json({ error: "Internal server error" });
+    res.status(HttpStatus.FORBIDDEN).json({ error: "Internal server error" });
   }
 };
 
-exports.deleteById = async (req, res) => {
+const deleteById = async (req, res) => {
   const id = req.params.id;
   try {
-    const deletedTodo = await Todo.findByIdAndDelete(id, { deleted: true });
+    const deletedTodo = await Todo.findByIdAndDelete(id);
     if (!deletedTodo) {
-      return res.status(404).json({ error: "Todo not found" });
+      return res.status(HttpStatus.NOT_FOUND).json({ error: "Todo not found" });
     }
-    res.status(200).json({deletedTodo,msg:"Todo has been deleted"});
-
+    res.status(HttpStatus.OK).json({ deletedTodo, msg: "Todo has been deleted" });
   } catch (error) {
-    console.log("error", error);
+    console.error("Error deleting todo:", error);
+    res.status(HttpStatus.INTERNAL_SERVER_ERROR).json({ error: "Internal server error" });
   }
 };
+
+
+module.exports = { getTodoByID, getTodos, postTodo, deleteById, updateTodo };
