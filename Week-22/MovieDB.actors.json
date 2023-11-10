@@ -1,0 +1,125 @@
+[{
+  "_id": {
+    "$oid": "65338aed150bdba4e5eac1f0"
+  },
+  "name": "Leonardo DiCaprio",
+  "nationality": "American",
+  "movies_acted_in": [
+    {
+      "title": "Inception",
+      "release_year": 2010
+    },
+    {
+      "title": "The Dark Knight",
+      "release_year": 2008
+    },
+    {
+      "title": "Titanic",
+      "release_year": 1997
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65338aed150bdba4e5eac1f1"
+  },
+  "name": "Joseph Gordon-Levitt",
+  "nationality": "American",
+  "movies_acted_in": [
+    {
+      "title": "Inception",
+      "release_year": 2010
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65338aed150bdba4e5eac1f2"
+  },
+  "name": "Elliot Page",
+  "nationality": "Canadian",
+  "movies_acted_in": [
+    {
+      "title": "Inception",
+      "release_year": 2010
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65338aed150bdba4e5eac1f3"
+  },
+  "name": "Christian Bale",
+  "nationality": "British",
+  "movies_acted_in": [
+    {
+      "title": "The Dark Knight",
+      "release_year": 2008
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65338aed150bdba4e5eac1f4"
+  },
+  "name": "Heath Ledger",
+  "nationality": "Australian",
+  "movies_acted_in": [
+    {
+      "title": "The Dark Knight",
+      "release_year": 2008
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65338aed150bdba4e5eac1f5"
+  },
+  "name": "Aaron Eckhart",
+  "nationality": "American",
+  "movies_acted_in": [
+    {
+      "title": "The Dark Knight",
+      "release_year": 2008
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65338aed150bdba4e5eac1f6"
+  },
+  "name": "John Travolta",
+  "nationality": "American",
+  "movies_acted_in": [
+    {
+      "title": "Pulp Fiction",
+      "release_year": 1994
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65338aed150bdba4e5eac1f7"
+  },
+  "name": "Samuel L. Jackson",
+  "nationality": "American",
+  "movies_acted_in": [
+    {
+      "title": "Pulp Fiction",
+      "release_year": 1994
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65338aed150bdba4e5eac1f8"
+  },
+  "name": "Uma Thurman",
+  "nationality": "American",
+  "movies_acted_in": [
+    {
+      "title": "Pulp Fiction",
+      "release_year": 1994
+    }
+  ]
+}]

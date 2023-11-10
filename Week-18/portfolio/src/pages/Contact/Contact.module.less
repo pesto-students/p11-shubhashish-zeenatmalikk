@@ -1,0 +1,42 @@
+.Contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  flex-direction: column;
+  .head {
+    font-family: "Satoshi-bold";
+    letter-spacing: 0.01rem;
+    margin:  1rem;
+    font-size: 2rem;
+    text-transform: capitalize;
+    span {
+      color: #aa1126;
+      font-family: "Satoshi-bold";
+    }
+  }
+  .fieldWrap {
+    display: flex;
+    align-items: center;
+    :global {
+      .MuiOutlinedInput-root {
+        border: 1px solid #aa1126;
+        color: aliceblue;
+      }
+      .MuiOutlinedInput-root.Mui-focused{
+outline: none;
+border: none;
+
+    }
+    }
+    .field{
+        margin-right: 0.8rem;
+    }
+    .btn{
+        background-color: #aa1126;
+        height: auto;
+        padding: 1rem;
+        width: 10rem ;
+    }
+  }
+}
